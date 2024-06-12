@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Tour with Intro.js</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Intro.js CSS -->
+  <link href="https://cdn.bootcdn.net/ajax/libs/intro.js/7.2.0/introjs.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="mt-5" data-step="1" data-intro="Welcome to the tour!" data-scrollTo='tooltip' data-position='bottom'>
+      Welcome to My Website</h1>
+    <button class="btn btn-primary mt-3" onclick="startTour()">Start Tour</button>
+
+    <div class="card mt-5" data-step="2" data-intro="This is a card component." data-scrollTo='tooltip'
+      data-position='right'>
+      <div class="card-body">
+        <h5 class="card-title">Card Title</h5>
+        <p class="card-text">Some example text. Some example text.</p>
+      </div>
+    </div>
+
+    <form class="mt-5" data-step="3" data-intro="This is a form. You can input your data here." data-scrollTo='tooltip'
+      data-position='left'>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/intro.js/7.2.0/intro.js"></script>
+  <!-- Custom JS -->
+  <script>
+    function startTour() {
+      introJs().start();
+    }
+  </script>
+</body>
+
+</html>
